@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	<div>
+	<h:graphicImage value="resources/images/home.jpg" width="40px" /><a class="active" href="http://localhost:8080/tocestat/userType.jsf">Home</a>
+	
+</div>
+	 
+<h:head>
+	<title>Log In</title>
+	<h:outputStylesheet library = "css" name = "styles.css"  /> 
+</h:head>
+<div style="line-height: 38px; margin-left: 12em;" >
+	<h:body  style="background-color:#F3F3F3;">
+	
+		<h1 style="color:#FF4081; margin-left: 3em;">Faculty Registration</h1>
+		<div >
+			<a 
+				href="#{request.contextPath}/FacultyLogin.xhtml" ><h2 style=" margin-left: 21em;">Login Here </h2></a>
+
+		</div>
+		<h:form id="res" >
+
+			
+			<h:panelGrid columns="3">
+
+
+				<h:outputLabel value="Your name" for="nam" />
+				<h:inputText id="nam" value="#{facMB.facuEnty.name}" required="true" requiredMessage="Please enter the Name"/>
+				<h:message for="nam" style = "color:red"/>
+				
+				<h:outputLabel value="Phone" for="ph" />
+				<h:inputText id="ph" value="#{facMB.facuEnty.phone}" required="true" requiredMessage="Please enter the Phone"/>
+				<h:message for="ph" style = "color:red"/>
+				
+				<h:outputLabel value="Dept" for="dept" />
+				<h:inputText id="dept" value="#{facMB.facuEnty.dept}" required="true" requiredMessage="Please enter the Name"/>
+				<h:message for="dept" style = "color:red"/>
+				
+				
+				<h:outputLabel value="Email" for="em" />
+				<h:inputText id="em" value="#{facMB.facuEnty.email}" required="true" requiredMessage="Please enter the Email"/>
+				<h:message for="em" style = "color:red"/>
+
+				<h:outputLabel value="User Name" for="log" />
+				<h:inputText id="log" value="#{facMB.facuEnty.username}" required="true" requiredMessage="Please enter the User name"/>
+				<h:message for="log" style = "color:red"/>
+				
+				<h:outputLabel value="Password" for="pass" />
+				<h:inputSecret id="pass" value="#{facMB.facuEnty.password}" required="true" requiredMessage="Please enter the password"/>
+				<h:message for="pass" style = "color:red"/>
+				
+				<h:commandButton value="Register" action="#{facMB.doRegister}"
+					style="color:blue"/>
+			</h:panelGrid>
+
+		
+
+		</h:form>
+	</h:body>
+</div>
+</html>

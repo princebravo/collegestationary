@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+		
+<div style="line-height: 38px; margin-left: 12em;">
+	<h:body style="background-color:#E9EBEE;">
+		<h1 style="color:#FF4081; font-family:verdana;">Login As Faculty</h1>
+		<h:form id="flogin" style="background-color:#FFFFFF; width: 565px; ">
+			<h:panelGrid columns="3" style="width: 443px; ">
+			
+						<h:outputLabel value="User Name" for="loga" />
+				<h:inputText id="loga" value="#{faMB.username}" required="true"
+					requiredMessage="Please Enter User name" />
+				<h:message for="loga" style = "color:red"/>
+
+				<h:outputLabel value="Password" for="passa" />
+				<h:inputSecret id="passa" value="#{faMB.password}" required="true"
+					requiredMessage="Please Enter Password" />
+					<h:message for="passa" style="color:red"/>
+					
+					<h:outputLabel value="Dept" for="dept" />
+				<h:inputText id="dept" value="#{faMB.dept}" required="true"
+					requiredMessage="Please Enter User Dept" />
+				<h:message for="dept" style = "color:red"/>
+					
+
+				<h:commandButton value="Login Here" action="#{faMB.dokogin}"
+					style="color:blue" />
+
+			</h:panelGrid>
+		</h:form>
+	</h:body>
+</div>
+</html>

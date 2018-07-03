@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	<div style="margin-left:50em;"><a class="active" href="http://localhost:8080/tocestat/faces/SupplierRegister.xhtml">Log Out</a>
+	</div>
+	<div>
+	<h:graphicImage value="resources/images/home.jpg" width="40px" /><a class="active" href="http://localhost:8080/tocestat/userType.jsf">Home</a>
+	
+</div>
+	
+<div style="margin-left: 12em;">
+	<h:body  style="background-color:#FAFAFA;">
+		<h2 style="margin-left: 25em; background-color: red">Welcome
+			#{supMB.username}</h2>
+		<h2>Order From Admin</h2>
+		<h:form style="margin-left: 4em;">
+
+
+			<h:panelGrid>
+				<h:dataTable value="#{suptaMB.qentys}" var="suplier" cellspacing="1" cellpadding="10"
+					styleClass="employeeTable" headerClass="employeeTableHeader"
+					rowClasses="employeeTableOddRow,employeeTableEvenRow">
+
+					<h:column>
+						<f:facet name="header">Supplier Name</f:facet>    				
+				      #{suplier.suppname}
+				   </h:column>
+
+					<h:column>
+						<f:facet name="header">Product Name</f:facet>
+					     #{suplier.pname}
+					   </h:column>
+
+					
+
+
+				</h:dataTable>
+
+
+
+			</h:panelGrid>
+
+		</h:form>
+	</h:body>
+
+</div>
+</html>

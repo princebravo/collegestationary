@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+	 <h:head style="width: 500px; ">
+ <h2 style="margin-left: 15em;">Welcome to TOCE STATIONARY .</h2>
+	<title>Toce</title>
+	
+
+	
+</h:head>
+<div style="margin-left: 20em;">
+
+	<h:body>
+	
+		<h2>Please Select User Type in Below List</h2>
+		   
+		<h:form style="margin-left: 15em; color:blue">
+
+			<h:selectOneMenu value="#{useType.outcome}" onchange="submit()"
+				valueChangeListener="#{useType.navigate}">
+				<f:selectItem itemLabel="Login As...." />
+				<f:selectItem itemValue="/facultyRegister.xhtml" itemLabel="Faculty" />
+				<f:selectItem itemValue="/adminRegister.xhtml" itemLabel="Admin" />
+				<f:selectItem itemValue="/SupplierRegister.xhtml"
+					itemLabel="Supplier" />
+			</h:selectOneMenu>
+		</h:form>
+		
+	</h:body>
+	
+</div>
+<h:graphicImage value="resources/images/pk.jpg" style="width:1500px; height: 500px; " />
+		 
+</html>
